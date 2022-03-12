@@ -9,7 +9,6 @@ import { MatSliderModule } from '@angular/material/slider';
 import { HeaderComponent } from './shared/header/header.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatGridListModule} from "@angular/material/grid-list";
-import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     MatSliderModule,
     MatToolbarModule,
     MatGridListModule,
-    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
