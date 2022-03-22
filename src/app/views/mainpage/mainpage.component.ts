@@ -25,7 +25,7 @@ export class MainpageComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(AddClimbingRockDialogComponent, {
-      // width: '250px',
+      width: '600px',
       data: {name: this.name, location: this.location, bolting: this.bolting, difficulty: this.difficulty},
     });
 

@@ -1,23 +1,34 @@
 <h1 mat-dialog-title>Kletterfels anlegen</h1>
 <div mat-dialog-content>
-  <mat-form-field appearance="standard">
-    <mat-label>Name</mat-label>
-    <input matInput [(ngModel)]="data.name">
-  </mat-form-field>
-  <mat-form-field appearance="standard">
-    <mat-label>Standort</mat-label>
-    <input matInput [(ngModel)]="data.location">
-  </mat-form-field>
+  <div class="form-field">
+    <mat-form-field appearance="standard">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="data.name">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label>Standort</mat-label>
+      <input matInput [(ngModel)]="data.location">
+    </mat-form-field>
+  </div>
   <div>
-    <label id="difficulty-label">Schwierigkeitsgrad</label>
-    <mat-radio-group aria-labelledby="difficulty-label" class="difficulty-radio-group">
-      <mat-radio-button class="difficulty-radio-button" value="easy">einfach</mat-radio-button>
-      <mat-radio-button class="difficulty-radio-button" value="medium">mittel</mat-radio-button>
-      <mat-radio-button class="difficulty-radio-button" value="hard">schwer</mat-radio-button>
+    <label id="difficulty-label"><b>Schwierigkeitsgrad</b></label>
+    <mat-radio-group aria-labelledby="difficulty-label" class="radio-group">
+      <mat-radio-button class="radio-button" value="easy">einfach</mat-radio-button>
+      <mat-radio-button class="radio-button" value="medium">mittel</mat-radio-button>
+      <mat-radio-button class="radio-button" value="hard">schwer</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div>
+    <label id="bolting-label"><b>Absicherung</b></label>
+    <mat-radio-group aria-labelledby="bolting-label" class="radio-group">
+      <mat-radio-button class="radio-button" value="bad">schlecht</mat-radio-button>
+      <mat-radio-button class="radio-button" value="okay">okay</mat-radio-button>
+      <mat-radio-button class="radio-button" value="good">gut</mat-radio-button>
+      <mat-radio-button class="radio-button" value="very-good">sehr gut</mat-radio-button>
     </mat-radio-group>
   </div>
 </div>
-<div mat-dialog-actions>
+<div mat-dialog-actions class="action-bar">
   <button mat-raised-button (click)="onCancel()">Abbrechen</button>
   <button mat-raised-button color="primary" [mat-dialog-close]="data.name" cdkFocusInitial>Speichern</button>
 </div>
