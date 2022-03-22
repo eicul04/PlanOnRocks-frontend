@@ -1,0 +1,10 @@
+.difficulty-radio-group {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.difficulty-radio-button {
+  margin: 5px;
+}
