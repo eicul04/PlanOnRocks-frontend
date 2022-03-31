@@ -17,13 +17,16 @@ import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatRadioModule} from "@angular/material/radio";
 import {MatIconModule} from "@angular/material/icon";
+import { ClimbingRockTableComponent } from './shared/climbing-rock-table/climbing-rock-table.component';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
     AppComponent,
     MainpageComponent,
     HeaderComponent,
-    AddClimbingRockDialogComponent
+    AddClimbingRockDialogComponent,
+    ClimbingRockTableComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import {MatIconModule} from "@angular/material/icon";
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
     FormsModule,
     MatRadioModule,
     ReactiveFormsModule,

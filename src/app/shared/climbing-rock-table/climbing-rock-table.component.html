@@ -1,0 +1,28 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+  <!-- Position Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Kletterfels</th>
+    <td mat-cell *matCellDef="let element">{{element.name}}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="tripCategory">
+    <th mat-header-cell *matHeaderCellDef>Ausflugsart</th>
+    <td mat-cell *matCellDef="let element">{{element.tripCategory}}</td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="difficulty">
+    <th mat-header-cell *matHeaderCellDef>Schwierigkeit</th>
+    <td mat-cell *matCellDef="let element">{{element.difficulty}}</td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="bolting">
+    <th mat-header-cell *matHeaderCellDef>Absicherung</th>
+    <td mat-cell *matCellDef="let element">{{element.bolting}}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

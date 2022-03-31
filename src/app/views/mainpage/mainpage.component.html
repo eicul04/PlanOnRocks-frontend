@@ -12,12 +12,12 @@
     </button>
   </mat-grid-tile>
 </mat-grid-list>
-<mat-grid-list cols="1" rowHeight="400px">
-  <mat-grid-tile>Table</mat-grid-tile>
-  <li *ngIf="name">
-    Neuer Kletterfels: <i>{{name}}</i>
-  </li>
-</mat-grid-list>
+
+<app-climbing-rock-table></app-climbing-rock-table>
+<li *ngIf="name">
+  Neuer Kletterfels: <i>{{name}}</i>
+</li>
+
 
 
 
