@@ -30,7 +30,9 @@ export class AddClimbingRockDialogComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       name: this.data.name,
-      location: this.data.location
+      location: this.data.location,
+      difficulty: this.data.difficulty,
+      bolting: this.data.bolting
     })
   }
 

@@ -12,7 +12,7 @@
   </div>
   <div>
     <label id="difficulty-label"><b>Schwierigkeitsgrad</b></label>
-    <mat-radio-group aria-labelledby="difficulty-label" class="radio-group">
+    <mat-radio-group aria-labelledby="difficulty-label" class="radio-group" formControlName="difficulty">
       <mat-radio-button class="radio-button" value="easy">einfach</mat-radio-button>
       <mat-radio-button class="radio-button" value="medium">mittel</mat-radio-button>
       <mat-radio-button class="radio-button" value="hard">schwer</mat-radio-button>
@@ -20,7 +20,7 @@
   </div>
   <div>
     <label id="bolting-label"><b>Absicherung</b></label>
-    <mat-radio-group aria-labelledby="bolting-label" class="radio-group">
+    <mat-radio-group aria-labelledby="bolting-label" class="radio-group" formControlName="bolting">
       <mat-radio-button class="radio-button" value="bad">schlecht</mat-radio-button>
       <mat-radio-button class="radio-button" value="okay">okay</mat-radio-button>
       <mat-radio-button class="radio-button" value="good">gut</mat-radio-button>
@@ -28,6 +28,7 @@
     </mat-radio-group>
   </div>
 </mat-dialog-content>
+
 <div mat-dialog-actions class="action-bar">
   <button mat-raised-button (click)="onCancel()">Abbrechen</button>
   <button mat-raised-button color="primary" (click)="onSave()" cdkFocusInitial>Speichern</button>

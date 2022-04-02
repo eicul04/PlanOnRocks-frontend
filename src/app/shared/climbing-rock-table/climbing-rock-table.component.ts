@@ -13,11 +13,6 @@ export interface ClimbingRockElement {
   bolting: Bolting;
 }
 
-const ELEMENT_DATA: ClimbingRockElement[] = [
-  {name: 'Steinbruch Schriesheim', tripCategory: TripCategory.DAY_TRIP, difficulty: Difficulty.EASY, bolting: Bolting.VERY_GOOD},
-  {name: 'Finale', tripCategory: TripCategory.VACATION, difficulty: Difficulty.MEDIUM, bolting: Bolting.VERY_GOOD},
-];
-
 @Component({
   selector: 'app-climbing-rock-table',
   templateUrl: './climbing-rock-table.component.html',
@@ -35,6 +30,4 @@ export class ClimbingRockTableComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  // Methode muss von Speichern Button im climbing-rock-dialog component aufgerufen werden
 }
