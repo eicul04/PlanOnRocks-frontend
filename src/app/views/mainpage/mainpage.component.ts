@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {AddClimbingRockDialogComponent} from "../../shared/add-climbing-rock-dialog/add-climbing-rock-dialog.component";
+import {ClimbingRock} from "../../core/model/entities/climbing-rock.model";
+import {ClimbingRockService} from "../../core/services/climbing-rock.service";
 
 export interface AddClimbingRockDialogData {
   name: string;
@@ -15,13 +17,13 @@ export interface AddClimbingRockDialogData {
   styleUrls: ['./mainpage.component.css']
 })
 export class MainpageComponent implements OnInit {
-  // TODO declarate implicit, Type safety
+  // TODO declare implicit, Type safety
   name: string | undefined;
   location: string | undefined;
   bolting: string | undefined;
   difficulty: string | undefined;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private climbingRockService: ClimbingRockService) {}
 
   openDialog() {
     const dialogRef = this.dialog.open(AddClimbingRockDialogComponent, {
@@ -29,10 +31,9 @@ export class MainpageComponent implements OnInit {
       data: {name: this.name, location: this.location, bolting: this.bolting, difficulty: this.difficulty},
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`The dialog was closed`);
-      this.name = result;
-    });
+    dialogRef.afterClosed().subscribe(
+      data => this.climbingRockService.addClimbingRock(new ClimbingRock(data.name, data.difficulty, data.bolting))
+    );
   }
 
   ngOnInit(): void {

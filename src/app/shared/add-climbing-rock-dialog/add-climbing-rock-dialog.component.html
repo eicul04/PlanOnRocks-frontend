@@ -1,13 +1,13 @@
 <h1 mat-dialog-title>Kletterfels anlegen</h1>
-<div mat-dialog-content>
+<mat-dialog-content [formGroup]="form">
   <div class="form-field">
     <mat-form-field appearance="standard">
       <mat-label>Name</mat-label>
-      <input matInput [(ngModel)]="data.name">
+      <input matInput formControlName="name">
     </mat-form-field>
     <mat-form-field appearance="standard">
       <mat-label>Standort</mat-label>
-      <input matInput [(ngModel)]="data.location">
+      <input matInput formControlName="location">
     </mat-form-field>
   </div>
   <div>
@@ -27,9 +27,9 @@
       <mat-radio-button class="radio-button" value="very-good">sehr gut</mat-radio-button>
     </mat-radio-group>
   </div>
-</div>
+</mat-dialog-content>
 <div mat-dialog-actions class="action-bar">
   <button mat-raised-button (click)="onCancel()">Abbrechen</button>
-  <button mat-raised-button color="primary" [mat-dialog-close]="data.name" cdkFocusInitial>Speichern</button>
+  <button mat-raised-button color="primary" (click)="onSave()" cdkFocusInitial>Speichern</button>
 </div>
 
