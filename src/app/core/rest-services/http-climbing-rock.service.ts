@@ -10,9 +10,9 @@ export class HttpClimbingRockService {
 
   constructor(private http: HttpClient) { }
 
-  createClimbingRock(userId: number, groupName: string): Observable<ClimbingRock> {
-    return this.http.post<ClimbingRock>('/api/climbingRocks', groupName,
-      { params: new HttpParams().set('userId', String(userId)), headers: new HttpHeaders({
+  createClimbingRock(climbingRockRequest: ClimbingRock): Observable<ClimbingRock> {
+    return this.http.post<ClimbingRock>('/api/climbingRocks', climbingRockRequest,
+      { headers: new HttpHeaders({
           'Content-Type': 'application/json;charset=UTF-8',
         })});
   }

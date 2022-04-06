@@ -20,6 +20,7 @@ import {MatIconModule} from "@angular/material/icon";
 import { ClimbingRockTableComponent } from './shared/climbing-rock-table/climbing-rock-table.component';
 import {MatTableModule} from "@angular/material/table";
 import { AddClimbingRockComponent } from './shared/add-climbing-rock/add-climbing-rock.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { AddClimbingRockComponent } from './shared/add-climbing-rock/add-climbin
     FormsModule,
     MatRadioModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
