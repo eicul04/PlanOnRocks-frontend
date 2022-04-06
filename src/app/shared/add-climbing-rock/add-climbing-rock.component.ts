@@ -32,7 +32,7 @@ export class AddClimbingRockComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(
-      data => this.climbingRockService.addClimbingRock(new ClimbingRock(data.name, data.difficulty, data.bolting))
+      data => this.climbingRockService.addClimbingRock(new ClimbingRock(data.location, data.name, data.difficulty, data.bolting))
     );
   }
 
