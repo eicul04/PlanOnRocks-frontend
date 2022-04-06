@@ -3,16 +3,16 @@
   <div class="form-field">
     <mat-form-field appearance="standard">
       <mat-label>Name</mat-label>
-      <input matInput formControlName="name">
+      <input matInput formControlName="name" required>
     </mat-form-field>
     <mat-form-field appearance="standard">
       <mat-label>Standort</mat-label>
-      <input matInput formControlName="location">
+      <input matInput formControlName="location" placeholder="48.840084, 8.34455" required pattern="^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$">
     </mat-form-field>
   </div>
   <div>
     <label id="difficulty-label"><b>Schwierigkeitsgrad</b></label>
-    <mat-radio-group aria-labelledby="difficulty-label" class="radio-group" formControlName="difficulty">
+    <mat-radio-group aria-labelledby="difficulty-label" class="radio-group" formControlName="difficulty" required>
       <mat-radio-button class="radio-button" value="einfach">einfach</mat-radio-button>
       <mat-radio-button class="radio-button" value="mittel">mittel</mat-radio-button>
       <mat-radio-button class="radio-button" value="schwer">schwer</mat-radio-button>
@@ -20,7 +20,7 @@
   </div>
   <div>
     <label id="bolting-label"><b>Absicherung</b></label>
-    <mat-radio-group aria-labelledby="bolting-label" class="radio-group" formControlName="bolting">
+    <mat-radio-group aria-labelledby="bolting-label" class="radio-group" formControlName="bolting" required>
       <mat-radio-button class="radio-button" value="schlecht">schlecht</mat-radio-button>
       <mat-radio-button class="radio-button" value="okay">okay</mat-radio-button>
       <mat-radio-button class="radio-button" value="gut">gut</mat-radio-button>
@@ -31,6 +31,6 @@
 
 <div mat-dialog-actions class="action-bar">
   <button mat-raised-button (click)="onCancel()">Abbrechen</button>
-  <button mat-raised-button color="primary" (click)="onSave()" cdkFocusInitial>Speichern</button>
+  <button mat-raised-button color="primary" (click)="onSave()" cdkFocusInitial [disabled]="!form.valid">Speichern</button>
 </div>
 
