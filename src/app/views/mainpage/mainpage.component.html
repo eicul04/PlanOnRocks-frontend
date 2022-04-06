@@ -7,16 +7,12 @@
     </div>
   </mat-grid-tile>
   <mat-grid-tile>
-    <button mat-raised-button color="primary" (click)="openDialog()">
-      + Neuen Kletterfels anlegen
-    </button>
+    <app-add-climbing-rock></app-add-climbing-rock>
   </mat-grid-tile>
 </mat-grid-list>
 
 <app-climbing-rock-table></app-climbing-rock-table>
-<li *ngIf="name">
-  Neuer Kletterfels: <i>{{name}}</i>
-</li>
+
 
 
 

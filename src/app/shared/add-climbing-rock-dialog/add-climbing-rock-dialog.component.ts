@@ -1,7 +1,7 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {AddClimbingRockDialogData} from "../../views/mainpage/mainpage.component";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {AddClimbingRockDialogData} from "../add-climbing-rock/add-climbing-rock.component";
 
 @Component({
   selector: 'app-add-climbing-rock-dialog',

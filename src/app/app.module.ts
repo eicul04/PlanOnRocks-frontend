@@ -19,6 +19,7 @@ import {MatRadioModule} from "@angular/material/radio";
 import {MatIconModule} from "@angular/material/icon";
 import { ClimbingRockTableComponent } from './shared/climbing-rock-table/climbing-rock-table.component';
 import {MatTableModule} from "@angular/material/table";
+import { AddClimbingRockComponent } from './shared/add-climbing-rock/add-climbing-rock.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatTableModule} from "@angular/material/table";
     MainpageComponent,
     HeaderComponent,
     AddClimbingRockDialogComponent,
-    ClimbingRockTableComponent
+    ClimbingRockTableComponent,
+    AddClimbingRockComponent
   ],
   imports: [
     BrowserModule,
